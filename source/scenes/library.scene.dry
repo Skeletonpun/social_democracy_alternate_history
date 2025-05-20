@@ -5,11 +5,11 @@ go-to: menu
 
 = The Library
 
-Herein contains relevant information about the government and politics of the German republic.
+The absolute state of Australia
 
 @menu
 
-- @government: Germany's system of government
+- @government: Australia's system of government
 - @weimar_timeline: Timeline of the Weimar Republic before 1928
 - @curr_gov: Current government details
 - @demographics: Demographics
