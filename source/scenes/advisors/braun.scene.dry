@@ -1,13 +1,13 @@
-title: Otto Braun
+title: Jack Lang
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/BraunOtto.jpg
-view-if: braun_advisor = 1
+view-if: lang_advisor = 1
 new-page: true 
 
-= Otto Braun
+= Jack Lang
 
-Braun [? if spd_prussia = 1 : is ?][? if spd_prussia = 0 : was ?] the Minister-President of Prussia, the largest state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
+Lang [? if spd_prussia = 1 : is ?][? if spd_prussia = 0 : was ?] the Premier of New South Wales, the largest state in Australia. He is a reformist leader who seeks to work with the bourgeois.
 
 - @coalition
 - @prussian_bulwark
@@ -23,8 +23,15 @@ on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_governmen
 
 We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, [+ ddp_name +], and DVP, ?][? if not in_grand_coalition: Center (Zentrum) Party and [+ ddp_name +], ?] and reduced tensions with the coalition.
 
-@prussian_bulwark
-title: The Prussian Bulwark
+@game
+title: Governor-Premier Relations
+subtitle: Lang can work on improving our relations with the Governor of New South Wales
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: if advisor_action_timer > 0
+We have improved our relations with Governor (some sort of getname function here)
+
+@sydney_bulwark
+title: Fortress Sydney
 subtitle: As the Minister-President of Prussia, Braun has power over the Prussian bureaucracy and security services.
 choose-if: advisor_action_timer <= 0 and spd_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if spd_prussia == 0 : The SPD does not control Prussia. ?]
